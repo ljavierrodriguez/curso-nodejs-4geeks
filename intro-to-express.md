@@ -49,6 +49,6 @@ Ya instalado express en nuestras dependencias, procederemos a crear una archivo 
 
         $ node app.js
 
-7. El resultado esperado es el siguiente:
+7. El resultado esperado es el siguiente para verlo debes acceder a la siguiente ruta desde un navegador http://localhost:3000/:
 
     ![preview](./assets/express-output.png)
