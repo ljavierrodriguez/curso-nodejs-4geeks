@@ -1,0 +1,15 @@
+NodeJS Course
+
+1. Introduction to NodeJS
+2. Installation
+3. node y npm
+4. Middleware
+5. Express Generator Framework (models, controllers, routes)
+6. Get/Post
+7. Render views on NodeJS (pug or handlebars)
+8. API REST and API Rest with Node (GET, POST, PUT, DELETE)
+9. MongoDB and mongoose
+10. Authentication and JWT
+11. Deploy NodeJS with Heroku
+Typescript (optional)
+Unit testing with Jest (optional)
