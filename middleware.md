@@ -82,3 +82,29 @@ Defina las funciones de middleware de manejo de errores de la misma forma que ot
     });
 
 ### Middleware incorporado
+
+Desde la versión 4.x, Express ya no depende de Connect. Excepto express.static, todas las funciones de middleware que se incluían previamente con Express están ahora en módulos diferentes. Consulte la lista de funciones de middleware.
+
+express.static(root, [options])
+La única función de middleware incorporado en Express es express.static. Esta función se basa en serve-static y es responsable del servicio de activos estáticos de una aplicación Express.
+
+El argumento root especifica el directorio raíz desde el que se realiza el servicio de activos estáticos.
+
+### Middleware de terceros
+
+Utilice el middleware de terceros para añadir funcionalidad a las aplicaciones Express.
+
+Instale el módulo Node.js para la funcionalidad necesaria y cárguelo en la aplicación a nivel de aplicación o a nivel de direccionador.
+
+El siguiente ejemplo ilustra la instalación y carga de la función de middleware de análisis de cookies cookie-parser.
+
+    $ npm install cookie-parser
+
+Codigo Ejemplo:
+
+    const express = require('express');
+    const app = express();
+    const cookieParser = require('cookie-parser');
+
+    // load the cookie-parsing middleware
+    app.use(cookieParser());
