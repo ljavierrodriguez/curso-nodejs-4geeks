@@ -45,10 +45,26 @@ Ya instalado express en nuestras dependencias, procederemos a crear una archivo 
             console.log("Iniciando el servidor sobre el puerto" + port);
         });
 
-6. Una vez configurado el archivo desde un terminal o consola procederemos a ejecutar el siguiente comando.
-
-        $ node app.js
-
 7. El resultado esperado es el siguiente para verlo debes acceder a la siguiente ruta desde un navegador http://localhost:3000/:
 
     ![preview](./assets/express-output.png)
+
+6. Para informa de cuál es la carpeta de plantillas y cuál es la extensión que tienen estos archivos de plantilla vamos a añadir las siguientes lineas.
+        ...
+        const path = require('path');
+        
+        ...
+        // view engine setup
+        app.set('views', path.join(__dirname, 'views'));
+        app.set('view engine', 'pug');
+        ...
+
+7. Para definir donde se cargaran nuestros archivos publicos como por ejemplos css, js, imagenes, o archivos descargables podemos definir la siguiente linea: 
+
+        ...
+        app.use(express.static(path.join(__dirname, 'public')));
+        ...
+
+8. Una vez configurado el archivo desde un terminal o consola procederemos a ejecutar el siguiente comando.
+
+        $ node app.js

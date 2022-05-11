@@ -1,7 +1,7 @@
 # ![alt text](https://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=breathecode,32) Landing page con Node.js
 
 ```
-🔥 Este ejercicio está diseñado para realizarse en grupos de 2 o máximo 3 personas.
+🔥 Este ejercicio está diseñado para realizarse de 1 o máximo 2 personas.
    Si colaboras, discutes e intercambias ideas absorberás el contenido más rápidamente.
 ```
 
@@ -9,35 +9,26 @@
   <img height="200" src="https://github.com/breatheco-de/exercise-landing-page-with-react/blob/master/preview.gif?raw=true" />
 </p>
 
-Tecnologías: HTML, CSS, JS, Node.
+Tecnologías: HTML, CSS, JS, Node, express or express-generator.
 
 Vamos a construir [este landing page](https://blackrockdigital.github.io/startbootstrap-heroic-features/) pero utilizando node.
 
-La idea es dividir los componentes de Bootstrap en diferentes componentes de función, todos se importarán en el componente principal Home.js
-
-***Por favor use los Componentes de Función para esto***
-
-Nota: las tarjetas tienen un contenido diferente, piense DRY (no se repita) y declare solo ***un*** componente y use ```props``` para manejar contenido diferente.
+La idea es crear con Bootstrap renderizar los diferentes elementos dentro del diseñor y pasar los datos a mostrar dinamicamente, todos los elementos se deven cargar en una vista principal llamada home.ejs
 
 
 ## 🌱  Cómo iniciar este proyecto
 
-No clones este repositorio. El primer paso para comenzar a codificar es clonar el [react.js boilerplate](https://github.com/4GeeksAcademy/react-hello) en tu computador local o con Gitpod.
+a) Crear un repositorio y configura express desde cero.
 
-a) Si usas Gitpod (recomendada) puedes clonar el boilerplate [clic aquí](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello).
+b) Crear un repositorio y crear el proyecto usando express-generator.
 
-b) Si trabajas localmente, escribe el siguiente comando en tu terminal: `git clone https://github.com/4GeeksAcademy/react-hello`.
-
-💡 Importante: Recuerda actualizar el `remote` del proyecto con el de tu repositorio usando `git remote set-url origin <your new url>`, y luego guardar tu código en tu nuevo repositorio usando `add`, `commit` y `push`.
-
+💡 Importante: guardar tu código en tu nuevo repositorio usando `add`, `commit` y `push`.
 
 ## estrategia
 
-Tomate unos minutos para analizar 🤯 la imagen y dibuja tu estrategia sobre ella, marca los componentes que vas a desarrollar:
+Tomate unos minutos para analizar 🤯 la imagen y dibuja tu estrategia sobre ella, identifica los componentes que vas a utilizar de bootstrap:
 
 ![Strategy for building a landing page with react](https://github.com/breatheco-de/exercise-landing-page-with-react/blob/master/strategy.gif?raw=true)
-
-Lo que realmente queremos lograr con este ejercicio es que aprendas a decidir que components vas a crear, ¿Qué crees que deba ser un componente? ¿Qué se va a reutilizar? ¿Cómo puedes hacer que tu código quede realmente ordenado y prevenir futuros errores?: `<Jumbotron />`, `<Navbar />`, `<Card />`.
 
 Una vez terminada la estrategia puedes empezar a codificar, 
 ¡Empieza a programar 🎊!
