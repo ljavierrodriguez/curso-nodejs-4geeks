@@ -24,7 +24,7 @@ b) Crear un repositorio y crear el proyecto usando express-generator.
 
 💡 Importante: guardar tu código en tu nuevo repositorio usando `add`, `commit` y `push`.
 
-## estrategia
+## Estrategia
 
 Tomate unos minutos para analizar 🤯 la imagen y dibuja tu estrategia sobre ella, identifica los componentes que vas a utilizar de bootstrap:
 
