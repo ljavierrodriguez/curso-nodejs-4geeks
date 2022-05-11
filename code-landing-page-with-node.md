@@ -11,16 +11,14 @@
 
 Tecnologías: HTML, CSS, JS, Node, express or express-generator.
 
-Vamos a construir [este landing page](https://blackrockdigital.github.io/startbootstrap-heroic-features/) pero utilizando node.
-
 La idea es crear con Bootstrap renderizar los diferentes elementos dentro del diseñor y pasar los datos a mostrar dinamicamente, todos los elementos se deven cargar en una vista principal llamada home.ejs
 
 
 ## 🌱  Cómo iniciar este proyecto
 
-a) Crear un repositorio y configura express desde cero.
+a) Configura express desde cero.
 
-b) Crear un repositorio y crear el proyecto usando express-generator.
+b) Crear el proyecto usando express-generator.
 
 💡 Importante: guardar tu código en tu nuevo repositorio usando `add`, `commit` y `push`.
 
