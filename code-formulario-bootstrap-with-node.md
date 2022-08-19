@@ -1,4 +1,4 @@
-# ![alt text](https://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=breathecode,32) Formulario con Node.js
+# Crear formulario in node js
 
 ```
 🔥 Este ejercicio está diseñado para realizarse de 1 persona.
@@ -10,6 +10,7 @@
 
 Tecnologías: HTML, CSS, JS, Bootstrap, Node, express or express-generator.
 
+Vamos a crear un formulario que se rederize desde node/express utilizando el manejado de templates de node `Embedded JavaScript templates`.
 La idea es crear con Bootstrap renderizar los diferentes elementos dentro del diseñor y pasar los datos a mostrar dinamicamente, todos los elementos se deven cargar en una vista principal llamada home.ejs
 
 
