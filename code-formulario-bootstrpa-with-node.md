@@ -1,7 +1,7 @@
 # ![alt text](https://assets.breatheco.de/apis/img/images.php?blob&random&cat=icon&tags=breathecode,32) Formulario con Node.js
 
 ```
-🔥 Este ejercicio está diseñado para realizarse de 1.
+🔥 Este ejercicio está diseñado para realizarse de 1 persona.
 ```
 
 <p align="center">
