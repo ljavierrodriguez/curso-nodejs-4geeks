@@ -10,6 +10,7 @@ NodeJS Course
 8. API REST and API Rest with Node (GET, POST, PUT, DELETE)
 9. MongoDB and mongoose
 10. Authentication and JWT
-11. Deploy NodeJS with Heroku
+11. Unit Testing (Jest)
+12. Deploy NodeJS with Heroku
 Typescript (optional)
 Unit testing with Jest (optional)
