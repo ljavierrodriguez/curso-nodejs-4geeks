@@ -47,7 +47,7 @@ Implementa una funcionalidad de lectura posterior, es decir, un botón que permi
 
 Las siguientes funciones no son necesarias para la solución final, pero puede desarrollarlas si te sientes lo suficientemente seguro:
 
-- `+ 1` Evita que el sitio web haga Fetch a la API de Startwars nuevamente si se actualiza (puedes usar el almacenamiento local para guardar la tienda en el navegador local).
+- `+ 1` Evita que el sitio web haga Fetch a la API de Rick and Morty nuevamente si se actualiza (puedes usar el almacenamiento local para guardar la tienda en el navegador local).
 
 - `+ 3` Implementa una barra de búsqueda con "autocompletar" para Personajes y Locaciones. Cuando haces clic en autocompletar, debería llevarte a la página Personaje o Locacion.
 
