@@ -224,7 +224,7 @@ Ejemplo 1:
     example> db.users.deleteOne({ _id: ObjectId("631f84d3b81e90fb01c3130f")})
 
 Respuesta:
-```json
+```plain
 example> db.users.deleteOne({ _id: ObjectId("631f84d3b81e90fb01c3130f")})
 { acknowledged: true, deletedCount: 1 }
 example>
@@ -244,7 +244,7 @@ Ejemplo 1:
 
 
 Respuesta:
-```json
+```plain
 example> db.users.distinct("email")
 [ 'john.doe@email.com' ]
 example>
