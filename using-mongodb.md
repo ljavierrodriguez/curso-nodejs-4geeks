@@ -130,7 +130,7 @@ Ejemplo 1:
     example> db.users.insertOne({ name: 'John Doe', email: 'john.doe@email.com', phone: '1-555-55-55'})
 
 Respuesta:
-```json
+```bash
 example> db.users.insertOne({ name: 'John Doe', email: 'john.doe@email.com', phone: '1-555-55-55'})
 {
   acknowledged: true,
@@ -147,7 +147,7 @@ Ejemplo 2:
     ])
 
 Respuesta:
-```json
+```bash
 example> db.users.insertMany([ { name: 'John Doe', email: 'john.doe@email.com', phone: '1-555-55-55' }, { name: 'Jane Doe', email: 'jane.doe@email.com', phone: '1-555-55-55' }])
 {
   acknowledged: true,
@@ -167,7 +167,7 @@ Sintaxis:
     example> db.coleccionName.find()
 
 Respuesta
-```json
+```bash
 example> db.users.find()
 [
   {
@@ -199,7 +199,7 @@ Ejemplo 1:
     example> db.users.updateOne({ _id: ObjectId("631f84d3b81e90fb01c3130f")}, {$set : { phone: '+56 9 3030 1111'}})
 
 Respuesta:
-```json
+```bash
 example> db.users.updateOne({ _id: ObjectId("631f84d3b81e90fb01c3130f")}, {$set : { phone: '+56 9 3030 1111'}})
 {
   acknowledged: true,
@@ -224,7 +224,7 @@ Ejemplo 1:
     example> db.users.deleteOne({ _id: ObjectId("631f84d3b81e90fb01c3130f")})
 
 Respuesta:
-```plain
+```bash
 example> db.users.deleteOne({ _id: ObjectId("631f84d3b81e90fb01c3130f")})
 { acknowledged: true, deletedCount: 1 }
 example>
@@ -244,7 +244,7 @@ Ejemplo 1:
 
 
 Respuesta:
-```plain
+```bash
 example> db.users.distinct("email")
 [ 'john.doe@email.com' ]
 example>
