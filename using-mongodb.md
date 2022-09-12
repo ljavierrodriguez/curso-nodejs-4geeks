@@ -12,7 +12,10 @@ Sintaxis:
 
     $ mongod --version
 
-```json
+Respuesta:
+
+```bash
+$ mongod --version
 db version v6.0.0
 Build Info: {
     "version": "6.0.0",
@@ -24,6 +27,7 @@ Build Info: {
         "target_arch": "aarch64"
     }
 }
+$
 ```
 
 ### Conectar a mongodb:
@@ -36,7 +40,7 @@ Sintaxis:
 
 Las respuesta seria la siguiente salida:
 
-```json
+```bash
 test>
 ```
 
@@ -48,7 +52,7 @@ Sintaxis:
 
 Resultado esperado:
 
-```json
+```bash
 test> show dbs
 admin    40.00 KiB
 config  108.00 KiB
@@ -66,7 +70,7 @@ Sintaxis:
 
 Las respuesta seria la siguiente salida:
 
-```json
+```bash
 test> use example
 switched to db example
 ```
@@ -81,7 +85,7 @@ Sintaxis:
 
 Obteniendo el siguiente resultado:
 
-```json
+```bash
 example> { ok: 1, dropped: 'example' }
 ```
 
@@ -92,7 +96,7 @@ Sintaxis:
     example> show collections
 
 Respuesta:
-```json
+```bash
 example> show collections
 users
 example> 
@@ -107,7 +111,7 @@ Sintaxis:
     example> db.createCollection('users', options)
     
 Respuesta:
-```json
+```bash
 example> db.createCollection('users')
 { ok: 1 }
 example> 
