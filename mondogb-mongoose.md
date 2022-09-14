@@ -36,7 +36,7 @@ MongoDB proporciona un framework de agregación que permite realizar operaciones
 <p>&nbsp;</p>
 
 <p align="center">
-  <img height="200" src="assets/mongoose.png" />
+  <img height="200" src="./assets/mongoose.png" />
 </p>
 
 # ¿Qué es mongoose?
