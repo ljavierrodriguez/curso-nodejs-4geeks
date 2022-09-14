@@ -1,4 +1,6 @@
-![jwt-node](assets/jwt-node.jpeg)
+<p align="center" style="background: white;">
+    <img src="./assets/jwt-node.jpeg" width="100%" />
+</p>
 # NodeJS y JWT
 
 JSON Web Token es un estándar abierto basado en JSON propuesto por IETF para la creación de tokens de acceso que permiten la propagación de identidad y privilegios o claims en inglés

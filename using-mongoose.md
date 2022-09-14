@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/mongoose.png" width="100%"/>
+  <img src="./assets/mongoose.png" width="100%"/>
 </p>
 
 # Usar mongodb utilizando el ODM Mongoose
