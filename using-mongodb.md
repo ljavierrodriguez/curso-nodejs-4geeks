@@ -123,7 +123,7 @@ Para crear un documento, el insert() se utiliza el método. El método insert ()
 
 ## Insert
 
-Para ***insertar*** un registro insert() or insertOne() se puede utilizar el método.
+Para ***insertar*** un registro se puede utilizar el método insertOne() o insertMany().
 
 Sintaxis:
 
