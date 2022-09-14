@@ -135,9 +135,29 @@ user.save((err) => {
 })
 ```
 
+## Seleccionar datos usando los modelos de Mongoose
+
+Hemos anteriormente insertado documentos con los dos modelos User y Contact, ahora el proceso de buscar es similar al crear solo que debemos conseguir el elemento que queremos, para ellos tenemos diferentes metodos tales como find(), findOne(), findById(), findByIdAndUpdate():
+
+
+Ejemplo 1:
+
+```javascript
+const user = User.find({
+	name: 'John Doe'
+})
+```
+
+Ejemplo 2:
+```javascript
+const contact = Contact.findById({
+	_id: '632244bb405329d320cde2ae'
+})
+```
+
 ## Actualizar datos usando los modelos de Mongoose
 
-Hemos anteriormente insertado documentos con los dos modelos User y Contact, ahora el proceso de actualizar es similar al crear solo que debemos conseguir el elemento que queremos actualizar, para ellos tenemos diferentes metodos tales como update(), updateOne():
+Hemos anteriormente localizado documentos con los dos modelos User y Contact, ahora el proceso de actualizar es similar al crear solo que debemos conseguir el elemento que queremos actualizar, para ellos tenemos diferentes metodos tales como update(), updateOne():
 
 
 Ejemplo 1:
