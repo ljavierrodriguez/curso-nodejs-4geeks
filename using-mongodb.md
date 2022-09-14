@@ -127,7 +127,7 @@ Para ***insertar*** un registro se puede utilizar el método insertOne() o inser
 
 Sintaxis:
 
-    example> db.collectionName.insert({ document })
+    example> db.collectionName.insertOne({ document })
 
 Ejemplo 1:
 
