@@ -183,3 +183,23 @@ contact.updateOne({
     name: 'Jane M. Doe'
 }).exec()
 ```
+
+## Eliminar documentos usando los modelos de Mongoose
+
+Hemos anteriormente actualizado documentos con los dos modelos User y Contact, ahora el proceso de eliminar es similar al crear o buscar solo que debemos conseguir el elemento que queremos eliminar o usando el modelo segun el filtro suministrado, para lo cual contamos con diferentes metodos tales como deleteOne(), deleteMany() o usando la instancia del documento y usar el metodo delete:
+
+
+Ejemplo 1:
+
+```javascript
+User.deleteOne({ name: 'John Doe' }, function (err) {
+  if (err) throw err;
+});
+```
+
+Ejemplo 2:
+```javascript
+User.deleteMany({ is_active: false }, function (err) {
+  if (err) throw err;
+});
+```
