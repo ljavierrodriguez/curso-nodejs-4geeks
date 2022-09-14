@@ -144,11 +144,12 @@ example>
 ```
 
 Ejemplo 2:
-
-    example> db.users.insertMany([
-        { name: 'John Doe', email: 'john.doe@email.com', phone: '1-555-55-55'},
-        { name: 'Jane Doe', email: 'jane.doe@email.com', phone: '1-555-55-55'}
-    ])
+```bash
+example> db.users.insertMany([
+    { name: 'John Doe', email: 'john.doe@email.com', phone: '1-555-55-55'},
+    { name: 'Jane Doe', email: 'jane.doe@email.com', phone: '1-555-55-55'}
+])
+```
 
 Respuesta:
 ```bash
