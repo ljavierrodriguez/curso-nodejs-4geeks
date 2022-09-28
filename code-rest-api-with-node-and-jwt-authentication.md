@@ -1,8 +1,8 @@
 # Autenticación JWT con Node, Express y MongoDB
 
-Casi todos los sitios web en el mundo tienen autenticación de usuarios, en este proyecto debes realizar una REST API implementando la autenticación de usuarios usando javascript y el framework NodeJS con express y deberar implementar los cambios necesarios para almacenar los datos en la base datos y utilizar MongoDB.
+Casi todos los sitios web en el mundo tienen autenticación de usuarios, en este proyecto debes realizar una REST API implementando la autenticación de usuarios usando javascript y el framework NodeJS con express y deberas implementar los cambios necesarios para almacenar los datos en la base datos y utilizar MongoDB.
 
-El uso del code anterior de la api de tareas es recomendada para comenzar el desarrollo, ya esta cumple con todas los endpoints necesarios y solo debera agregar dos endpoint adiciones y crear un middleware que debera validar que el usuario sea valido dentro de nuetra REST API.
+El uso del code anterior de la api de tareas es recomendada para comenzar el desarrollo, ya que esta cumple con todos los endpoints necesarios y solo debera agregar dos endpoint adicionales y crear un middleware que deberá validar que el usuario sea válido dentro de nuestra REST API.
 
 ## 🗒️ Instrucciones
 
@@ -16,12 +16,12 @@ Al menos las siguientes páginas y componentes de react deben ser implementados 
 
 | Ruta          | Metodo      | Funcionalidad                                                            | 
 | ------------- | ----------- | -----------------------------------------------------------------------  |
-| `/signup`.    | `POST`      | Ruta que me permitira registrarme en la REST                             |
-| `/signin`.    | `POST`      | Ruta que me permitira iniciar sesión en la REST API                      |
+| `/signup`.    | `POST`      | Ruta que me permite registrarme en la REST                             |
+| `/signin`.    | `POST`      | Ruta que me permite iniciar sesión en la REST API                      |
 | `/todos`      | `GET`       | Listado de tareas  (publica)                                             |
-| `/todos`      | `POST`      | Ruta que me permitira crear una tarea en la REST API  (privada)          |
-| `/todos/:id`  | `PUT`       | Ruta que me permitira actualizar una tarea en la REST API  (privada)     |
-| `/todos/:id`  | `DELETE`    | Ruta que me permitira eliminar una tarea en la REST API  (privada)       |
+| `/todos`      | `POST`      | Ruta que me permite crear una tarea en la REST API  (privada)          |
+| `/todos/:id`  | `PUT`       | Ruta que me permite actualizar una tarea en la REST API  (privada)     |
+| `/todos/:id`  | `DELETE`    | Ruta que me permite eliminar una tarea en la REST API  (privada)       |
 
 ## Mas detalles sobre la autenticación:
 
