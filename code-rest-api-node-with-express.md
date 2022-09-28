@@ -1,7 +1,7 @@
 # Crear REST API en node js con ***express***
 
 ```
-🔥 Este ejercicio está diseñado para realizarse de 1 persona.
+🔥 Este ejercicio está diseñado para realizarlo de 1 persona.
 ```
 
 <!-- <p align="center">
