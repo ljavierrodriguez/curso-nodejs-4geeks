@@ -4,7 +4,7 @@ Node.js es un entorno en tiempo de ejecución multiplataforma, de código abiert
 
 Ejemplo
 
-```python
+```javascript
     const http = require('http');
 
     const hostname = '127.0.0.1';
