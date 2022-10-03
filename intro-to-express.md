@@ -22,17 +22,9 @@ Una vez ejecutado obtendremos un archivo basico de configuracion llamado *packag
 
 ```json
 {
-    "name": "curso-nodejs-4geeks",
-    "version": "1.0.0",
-    "description": "",
+    ...
     "type": "modules",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    ...
 }
 ```
 Por defecto nodejs trabaja con commonjs para importar los modulos dentro de nuestra aplicaciòn.
