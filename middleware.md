@@ -29,22 +29,23 @@ Puede cargar middleware de nivel de aplicación y de nivel de direccionador con 
 
 Para cargar la función de middleware, llame a app.use(), especificando la función de middleware. Por ejemplo, el siguiente código carga la función de middleware myLogger antes de la ruta a la vía de acceso raíz (/).
 
-    let express = require('express');
-    let app = express();
+```javascript
+let express = require('express');
+let app = express();
 
-    let myLogger = function (req, res, next) {
-        console.log('LOGGED');
-        next();
-    };
+let myLogger = function (req, res, next) {
+    console.log('LOGGED');
+    next();
+};
 
-    app.use(myLogger);
+app.use(myLogger);
 
-    app.get('/', function (req, res) {
-        res.send('Hello World!');
-    });
+app.get('/', function (req, res) {
+    res.send('Hello World!');
+});
 
-    app.listen(3000);
-
+app.listen(3000);
+```
 
 ### Middleware de nivel de aplicación
 
