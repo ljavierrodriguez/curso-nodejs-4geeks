@@ -3,21 +3,21 @@
 </p>
 # NodeJS y JWT
 
-JSON Web Token is an open standard based on JSON proposed by the IETF for the creation of access tokens that allow the propagation of identity and privileges or claims in English
+JSON Web Token es un estándar abierto basado en JSON propuesto por IETF para la creación de tokens de acceso que permiten la propagación de identidad y privilegios o claims en inglés
 
-## Build an API
+## Construir una API 
 
-In this case we configure a very simple api in which the way to integrate jwt will be analyzed
+En este caso configuramos una api muy simple en la cual se analizara la forma de integrar jwt
 
-Start our project
+Iniciar nuestro proyecto 
 
     $ npm init -y
 
-Install the necessary dependencies
+Instalar las dependencias necesarias 
 
     $ npm i --save express jsonwebtoken
 
-We create an index.js file and add the following content:
+Creamos un archivo index.js y agregamos el siguiente contenido:
 
 ```javascript
 const express = require('express');
@@ -37,11 +37,11 @@ app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`)
 
 ```
 
-We start our server
+Iniciamos nuestro servidor
 
     $ node index.js
 
-Add a route for our authentication
+Agregar una ruta para nuestra autenticación
 
 ```javascript
 
@@ -66,7 +66,7 @@ app.post('/token', (req, res) => {
 
 ```
 
-We should get a response similar to this
+Debemos obtener una respuesta similar a esta
 
 ```json
 {
@@ -74,7 +74,7 @@ We should get a response similar to this
 }
 ```
 
-Now we must create a middleware that will take care of validating the token when accessing a private endpoint:
+Ahora debemos crear un middleware que se encargara de validar el token al momento de acceder a un endpoint privado:
 
 ```javascript
 ...
@@ -96,7 +96,8 @@ auth.use((req, res, next) => {
 
 ```
 
-Now we add a private route and use our middleware that validates if the token is coming in the request.
+
+Ahora agregamos una ruta privada y utilizamos nuestro middleware que valida si viene el token en el request.
 
 ```javascript
 
