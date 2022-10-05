@@ -113,7 +113,7 @@ app.get('/datos-privados', auth, (req, res) => {
 
 ```
 
-Nuestro archivo index.js deberia contener lo siguiente:
+Our index.js file should contain the following:
 
 ```javascript
 const express = require('express');
