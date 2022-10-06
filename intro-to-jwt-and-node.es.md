@@ -6,9 +6,9 @@
 
 JSON Web Token es un estándar abierto basado en JSON propuesto por IETF para la creación de tokens de acceso que permiten la propagación de identidad y privilegios o claims en inglés
 
-## Contruir una API 
+## Construir una API 
 
-En este caso configuramos una api muy simple en la cual se analizara la forma de integrar jwt
+En este caso configuramos una api muy simple en la cual se analizará la forma de integrar jwt
 
 Iniciar nuestro proyecto 
 
@@ -41,7 +41,6 @@ app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`)
 Iniciamos nuestro servidor
 
     $ node index.js
-
 
 Agregar una ruta para nuestra autenticación
 
@@ -116,7 +115,7 @@ app.get('/datos-privados', auth, (req, res) => {
 
 ```
 
-Nuestro archivo index.js deberia contener lo siguiente:
+Nuestro archivo index.js debería contener lo siguiente:
 
 ```javascript
 const express = require('express');

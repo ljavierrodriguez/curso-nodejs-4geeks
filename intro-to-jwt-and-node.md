@@ -4,11 +4,11 @@
 
 # NodeJS y JWT
 
-JSON Web Token is an open standard based on JSON proposed by the IETF for the creation of access tokens that allow the propagation of identity and privileges or claims in English.
+JSON Web Token is an open standard based on JSON proposed by the IETF for the creation of access tokens that allow the propagation of identity and privileges or claims in English
 
-## Build an API 
+## Build an API
 
-In this case we configure a very simple api in which the way to integrate jwt will be analyzed.
+In this case we configure a very simple api in which the way to integrate jwt will be analyzed
 
 Start our project
 
@@ -41,7 +41,6 @@ app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`)
 We start our server
 
     $ node index.js
-
 
 Add a route for our authentication
 
