@@ -1,4 +1,4 @@
-### Formularios en NodeJS
+# Formularios en NodeJS
 
 ¿Qué son formularios?
 
@@ -21,8 +21,8 @@ Definimos una ruta utiliando el metodo POST el cual recibira toda la informacion
         console.log(request.files)
     })
 
-1. ***request.body***: trae toda la informacion de nuestros inputs excepto de tipo "files"
-2. ***request.files***: trae toda la informacion de archivos adjuntados en nuestro formulario por ejemplo: pdf, imagenes, documentos
+1. ***request.body***: trae toda la informacion de nuestros inputs excepto de tipo "files".
+2. ***request.files***: trae toda la informacion de archivos adjuntados en nuestro formulario. For ejemplo; pdf, imagenes, documentos
 
 Nota: es importante resaltar que todos nuestros campos obligatoriamente tienen que tener el atributo ***name*** defindo en la etiqueta.
 
