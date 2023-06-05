@@ -8,14 +8,17 @@ The express-generator package helps a lot in developing web applications with No
 
 To install express generator we can run the following command.
 
-    $ npm i -g express-generator
+```bash
+$ npm i -g express-generator
+```
 
 ### Start a project with express generator
 
 To start a new project with express generator we can run the following command, which will generate a project structure:
 
-    $ express --pug webapp
-
+```bash
+$ express --pug webapp
+```
 ### Express generator directory structure
 
 When we create our app with express generator we get the following directory structure, which contains all the necessary files to start the project, using as pug. templating engine within the other template engines, we have ejs, hts
@@ -32,13 +35,17 @@ When we create our app with express generator we get the following directory str
 
 To install all the basic dependencies for the operation of our web, we access the main directory and run the following command:
 
-    $ npm install
+```bash
+$ npm install
+```
 
 ### Start our express generator Website 
 
 To start our web project we have to execute the following command:
 
-    $ npm run start
+```bash
+$ npm run start
+```
 
 
 

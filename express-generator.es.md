@@ -8,13 +8,17 @@ El paquete express-generator ayuda muchísimo en el desarrollo de aplicaciones w
 
 Para instalar express generator podemos ejecutar el siguiente comando.
 
-    $ npm i -g express-generator
+```bash
+$ npm i -g express-generator
+```
 
 ### Iniciar un proyecto con express generator
 
 Para iniciar un nuevo proyecto con express generator podemos ejecutar el siguiente comando, el cual nos generara una estructura de proyecto:
 
-    $ express --pug webapp
+```bash
+$ express --pug webapp
+```
 
 ### Estructura de directorios de express generator
 
@@ -32,10 +36,14 @@ Al crear nuestra aplicación con express generator obtenemos la siguiente estruc
 
 Para instalar todas las dependencias básicas para el funcionamiento de nuestra web ingresamos al directorio principal y ejecutamos el siguiente comando:
 
-    $ npm install
+```bash
+$ npm install
+```
 
 ### Iniciar nuestro sitio web de express generator
 
 Para iniciar nuestro proyecto web debemos ejecutar el siguiente comando:
 
-    $ npm run start
+```bash
+$ npm run start
+```
