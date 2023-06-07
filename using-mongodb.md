@@ -93,7 +93,7 @@ Syntax:
 example> db.dropDatabase()
 ```
 
-Obtaining the following result:
+Getting the following result:
 
 ```bash
 example> { ok: 1, dropped: 'example' }
@@ -123,7 +123,7 @@ Syntax:
 
 ```bash
 example> db.createCollection('users', options)
- ```
+```
 
 Response:
 
@@ -287,7 +287,6 @@ Example 1:
 ```bash
 example> db.users.distinct("email")
 ```
-
 Response:
 
 ```bash
@@ -295,9 +294,3 @@ example> db.users.distinct("email")
 [ 'john.doe@email.com' ]
 example>
 ```
-
-
-
-
-
-
