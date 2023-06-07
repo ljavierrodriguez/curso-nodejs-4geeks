@@ -123,7 +123,7 @@ Sintaxis:
 
 ```bash
 example> db.createCollection('users', options)
- ```
+```
 
 Respuesta:
 
