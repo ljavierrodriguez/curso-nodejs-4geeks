@@ -2,19 +2,19 @@
     <img src="./assets/mongodb.png" width="100%"/>
 </p>
 
-# Basic MongoDB Commands
+# Comandos Basicos MongoDB
 
-Here are the basic Mongodb commands you need to know as a programmer or database administrator
+Aqui están los comandos basicos que como programadores o administradores de base de datos debemos saber sobre mongodb 
 
-### Verify the Version:
+### Verificar de la Version:
 
-Syntax:
+Sintaxis:
 
 ```bash
 $ mongod --version
 ```
 
-Response:
+Respuesta:
 
 ```bash
 $ mongod --version
@@ -32,31 +32,31 @@ Build Info: {
 $
 ```
 
-### Connect to Mongodb:
+### Conectar a mongodb:
 
-To connect to the database, we must execute the command:
+Para conectar a la base de datos deberemos ejecutar el comando:
 
-Syntax:
+Sintaxis:
 
 ```bash
 $ mongosh mongodb://localhost:27017
 ```
 
-The response would be the following:
+Las respuesta seria la siguiente salida:
 
 ```bash
 test>
 ```
 
-### List the existing databases:
+### Listar las base de datos existentes:
 
-Syntax:
+Sintaxis:
 
 ```bash
-test> show dbs
+    test> show dbs
 ```
 
-Expected response:
+Resultado esperado:
 
 ```bash
 test> show dbs
@@ -66,94 +66,94 @@ local    72.00 KiB
 test>
 ```
 
-### Create a database or change to an existing one in Mongodb:
+### Crear una base de datos o cambiar a una existente en mongodb:
 
-To create a database, we will employ the command use `<db-name>` where `<db-name>` will be the name of the database:
+Para crear una base de datos usaremos el comando use <db-name> donde <db-name> será el nombre de la base de datos:
 
-Syntax:
+Sintaxis:
 
 ```bash
 test> use example
 ```
 
-The response will be the following output:
+Las respuesta seria la siguiente salida:
 
 ```bash
 test> use example
 switched to db example
 ```
 
-### Delete a database in Mongodb:
+### Eliminar una base de datos en mongodb:
 
-To delete an existing database we will execute the following command, once we have selected the database that we want to delete:
+Para eliminar una base de datos ya existente ejecutaremos el siguiente comando una vez seleccionada la base de datos que queremos eliminar:
 
-Syntax:
+Sintaxis:
 
 ```bash
 example> db.dropDatabase()
 ```
 
-Getting the following result:
+Obteniendo el siguiente resultado:
 
 ```bash
 example> { ok: 1, dropped: 'example' }
 ```
 
-### Display existing connections in the database:
+### Mostrar las colecciones existentes en la base de datos:
 
-Syntax:
+Sintaxis:
 
 ```bash
 example> show collections
 ```
 
-Response:
+Respuesta:
 
 ```bash
 example> show collections
 users
-example>
+example> 
 ```
 
-### Create a collection in the selected database:
+### Crear una coleccion en la base de datos seleccionada:
 
-To create a collection equivalent to a table in a relational database, where we will input the collection name and the options in case we wish to:
+Para crear una coleccion que es equivalente a una tabla en una base de datos relacional, donde indicaremos el nombre de la colección y las opcionaes en caso de querer hacerlo:
 
-Syntax:
+Sintaxis:
 
 ```bash
 example> db.createCollection('users', options)
 ```
 
-Response:
+Respuesta:
 
 ```bash
 example> db.createCollection('users')
 { ok: 1 }
-example>
+example> 
 ```
 
-# Related Operations (CRUD)
+# Operaciones Relacionadas (CRUD)
 
-To create a document, the method insert() is used. The insert() method creates one or several documents in the existing collection.
+Para crear un documento, el insert() se utiliza el método. El método insert () crea uno o varios documentos en la colección existente. 
 
 ## Insert
 
-To **insert** a record the method insertOne() or insertMany() can be used.
+Para ***insertar*** un registro se puede utilizar el método insertOne() o insertMany().
 
-Syntax:
+Sintaxis:
 
 ```bash
 example> db.collectionName.insertOne({ document })
 ```
 
-Example 1:
+Ejemplo 1:
 
 ```bash
 example> db.users.insertOne({ name: 'John Doe', email: 'john.doe@email.com', phone: '1-555-55-55'})
 ```
 
-Response:
+Respuesta:
 
 ```bash
 example> db.users.insertOne({ name: 'John Doe', email: 'john.doe@email.com', phone: '1-555-55-55'})
@@ -161,10 +161,10 @@ example> db.users.insertOne({ name: 'John Doe', email: 'john.doe@email.com', pho
   acknowledged: true,
   insertedId: ObjectId("631f83b9b81e90fb01c3130d")
 }
-example>
+example> 
 ```
 
-Example 2:
+Ejemplo 2:
 
 ```bash
 example> db.users.insertMany([
@@ -173,7 +173,7 @@ example> db.users.insertMany([
 ])
 ```
 
-Response:
+Respuesta:
 
 ```bash
 example> db.users.insertMany([ { name: 'John Doe', email: 'john.doe@email.com', phone: '1-555-55-55' }, { name: 'Jane Doe', email: 'jane.doe@email.com', phone: '1-555-55-55' }])
@@ -184,20 +184,20 @@ example> db.users.insertMany([ { name: 'John Doe', email: 'john.doe@email.com', 
     '1': ObjectId("631f84d3b81e90fb01c3130f")
   }
 }
-example>
+example> 
 ```
 
 ## Select
 
-To ***retrieve*** documents from a collection, we can use the command find().
+Para ***recuperar*** documentos de una colección podemos utilizar el comando find().
 
-Syntax:
+Sintaxis:
 
 ```bash
 example> db.coleccionName.find()
 ```
 
-Response:
+Respuesta
 
 ```bash
 example> db.users.find()
@@ -215,26 +215,26 @@ example> db.users.find()
     phone: '1-555-55-55'
   }
 ]
-example>
+example> 
 ```
 
 ## Update
 
-To update a single document the method updateOne() is used
+Para actualizar un solo documento utilizamos el método updateOne()
 
-Syntax:
+Sintaxis:
 
 ```bash
 example> db.collectionName.updateOne({SingleKeyToUpdate},{Set Command})
 ```
 
-Example 1:
+Ejemplo 1:
 
 ```bash
 example> db.users.updateOne({ _id: ObjectId("631f84d3b81e90fb01c3130f")}, {$set : { phone: '+56 9 3030 1111'}})
 ```
 
-Response:
+Respuesta:
 
 ```bash
 example> db.users.updateOne({ _id: ObjectId("631f84d3b81e90fb01c3130f")}, {$set : { phone: '+56 9 3030 1111'}})
@@ -246,51 +246,50 @@ example> db.users.updateOne({ _id: ObjectId("631f84d3b81e90fb01c3130f")}, {$set 
   upsertedCount: 0
 }
 example>
-```
+``` 
 
 ## Delete
 
-To delete one or several documents, we can use deleteOne() or deleteMany() methods
+Para eliminar un documento o más podemos utilizar el método deleteOne() o deleteMany()
 
-Syntax:
+Sintaxis:
 
-```bash
-example> db.collectionName.deleteOne({ condition })
-```
+    example> db.collectionName.deleteOne({ condition })
 
-Example 1:
+Ejemplo 1:
 
 ```bash
  example> db.users.deleteOne({ _id: ObjectId("631f84d3b81e90fb01c3130f")})
 ```
 
-Response:
+Respuesta:
 
 ```bash
 example> db.users.deleteOne({ _id: ObjectId("631f84d3b81e90fb01c3130f")})
 { acknowledged: true, deletedCount: 1 }
 example>
-```
+``` 
 
-## Retrieve Unique
+## Recuperar Distintos
 
-To retrieve unique records, we can use the distinct() command
+Para obtener registros unicos podemos utilizar el comando distinct()
 
-Syntax:
+Sintaxis:
 
 ```bash
 example> db.collectionName.distint(field)
 ```
 
-Example 1:
+Ejemplo 1:
 
 ```bash
 example> db.users.distinct("email")
 ```
-Response:
+
+Respuesta:
 
 ```bash
 example> db.users.distinct("email")
 [ 'john.doe@email.com' ]
 example>
-```
+``` 
