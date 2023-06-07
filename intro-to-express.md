@@ -1,24 +1,22 @@
 ![express](./assets/express.png)
 
-## ¿Qué es Express y para qué sirve?
+## What is Express and what it is used for?
 
-Express es un framework web, escrito en JavaScript y alojado dentro del entorno de ejecución NodeJS. El modulo explica algunos de los beneficios clave de este framework, como configurar tu entorno de desarrollo y como realizar tareas comunes en desarrollo y publicación web.
+Express is a web framework, written in Javascript and hosted within the NodeJS runtime. This module explains some of the key benefits of this framework, how to set up your development environment, and how to perform common tasks in web development and publishing.
 
-## ¿Qué función cumple Express en una aplicación web?
+## What function does Express have in a web application?
 
-Primeramente definamos qué es Express. Básicamente es un marco de desarrollo minimalista para Node.js que permite estructurar una aplicación de una manera ágil, nos proporciona funcionalidades como el enrutamiento, opciones para gestionar sesiones y cookies, etc. Express nos permite crear no solo *Aplicaciones Web* sino tambíen *API's*, esto quiere decir que ademas de genstionar nuestro frontend (html, css, imagenes, javascript, etc.). nos permite crear apis las cuales podran ser utilizadas con cualquier framework o libreria de frontend como por ejemplo: React, Angular, Vue, etc.
+First, let's define what is Express. It is basically a minimalist development framework for Node. JS that allows to structure an application in an agile way, provides us functionality such as routing, options to manage sessions and cookies, etc. Express not only allows us to create *Web Applications*, but also *API's*, this means that in addition to managing our frontend (html, css, images, javascript, etc.), it allows us to create apis witch can be used with any framework or frontend library like: React, Angular, Vue, etc.
 
+## Start an application with Express
 
-## Iniciar una aplicacion con express
-
-Para iniciar un proyecto con express crearemos una carpeta llamada *test-express*, una vez creada nos ubicaremos en la carpeta desde un terminal o con nuestro IDE favorito abriremos un terminal en el cual ejecutaremos el siguiente comando:
-
+To start a project with Express we will create a folder called *test-express*, once it is created we will locate ourselves in the folder from the terminal, or with our favorite IDE we can open a terminal in which we will run the next command:
 
 ```bash
 $ npm init -y
 ```
 
-Una vez ejecutado obtendremos un archivo basico de configuracion llamado *package.json*, una vez creado el archivo para trabajar nodejs como módulos podemos modificar nuestro ***package.json*** y agregar lo siguiente:
+Once executed, we will obtain a basic configuration file called *package.json*. Once created the file to work nodejs with modules, we can modify our ***package.json*** and add the following:
 
 ```json
 {
@@ -27,37 +25,36 @@ Una vez ejecutado obtendremos un archivo basico de configuracion llamado *packag
     ...
 }
 ```
-Por defecto nodejs trabaja con commonjs para importar los modulos dentro de nuestra aplicaciòn.
 
+By default nodejs works with commonjs to import the modules inside our application.
 
-Procederemos a instalar express usando el siguiente comando:
+We will proceed to install Express using the following command:
 
 ```bash
 $ npm i express --save
 ```
 
-Ya instalado express en nuestras dependencias, procederemos a crear una archivo llamado ***app.js***, en el cual escribiremos las siguientes lineas de codigo:
+Once installed Express in our dependencies, we will proceed to create a file called  ***app.js***, in which we will type the following coding lines:
 
-1. Importamos express en nuestro archivo:
-
-
-```javascript
-const express = require('express'); // importando express
-```
-        
-2. Instanciamos express
+1. Import Express in our file:
 
 ```javascript
-const app = express() // creando una instancia de express
+const express = require('express'); // import express
 ```
-
-3. Definimos el puerto por el cual se estara ejecutando nuestra aplicacion:
+       
+2. Start Express
 
 ```javascript
-const port = 3000; // definimos nuestro puerto a utilizar
+const app = express() // create an instance of express 
 ```
 
-4. Definimos una ruta utiliando el metodo GET el cual recibe dos parametros, un string que sera la forma de acceder a nuestro ruta y el segundo es una funcion que sera ejecutada al momento de acceder a la ruta, la cual recibe nos proporciona dos objetos un request y un response, siendo el primero el que nos permitira obtener la informacion que nos envia el cliente y el response el cual nos permitira entrear un mensaje al cliente que esta accediendo a nuestra ruta
+3. Define the port through which our application will be running:
+
+```javascript
+const port = 3000; // We define the port that we will use 
+```
+
+4. We define a route using the GET method which receives two parameters, a string that will be the way to access to our route and the second is a function that will be executed when accessing the route, which receives and provides us two objects: a request and a response; the request that will allow us to obtain the information that sends the client and the response, which will allow us to deliver a message to the client that is accessing our route
 
 ```javascript
 app.get('/', (request, response) => {
@@ -65,7 +62,7 @@ app.get('/', (request, response) => {
 })
 ```
 
-5. Definimos nuestro servidor utilizando el metodo *listen* el cual podremos acceder desde nuestra instancia de express, el cual recibe dos argumentos, el primero es el puerto por el cual queremos estar atentos si el cliente se conecta a nuestra aplicacion y el segundo es una funcion la cual podremos observar al momento de acceder a nuestra aplicacion
+5. We define our server by using the *listen* method, which can be access from our Express instance, and receives two arguments. The first one is the port where we want to listen if the client connects to our application, and the second one is a function which we can see accusing to our application
 
 ```javascript
 app.listen(port, () => {
@@ -73,11 +70,11 @@ app.listen(port, () => {
 });
 ```
 
-7. El resultado esperado es el siguiente para verlo debes acceder a la siguiente ruta desde un navegador http://localhost:3000/:
+6. The expected result is the following, to see it you have to access to this route from your browser http://localhost:3000/:
 
-    ![preview](./assets/express-output.png)
+![preview](./assets/express-output.png)
 
-6. Para informa de cuál es la carpeta de plantillas y cuál es la extensión que tienen estos archivos de plantilla vamos a añadir las siguientes lineas.
+7. To inform what the templates' folder is and what is the extension that these template files have, we are going to add the following lines.
 
 ```javascript
 ...
@@ -89,7 +86,7 @@ app.set('view engine', 'pug');
 ...
 ```
 
-7. Para definir donde se cargaran nuestros archivos publicos como por ejemplos css, js, imagenes, o archivos descargables podemos definir la siguiente linea: 
+8. To define where our public files will be loaded, such as css, js, images, or downloadable files, we can add the following line.
 
 ```javascript
 ...
@@ -97,8 +94,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 ...
 ```
 
-8. Una vez configurado el archivo desde un terminal o consola procederemos a ejecutar el siguiente comando.
+9. Once configured the file from a terminal or console, we will proceed to run the following command
 
 ```bash
 $ node app.js
 ```
+
+
+
+
