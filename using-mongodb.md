@@ -68,7 +68,7 @@ test>
 
 ### Create a database or change to an existing one in Mongodb:
 
-To create a database, we will employ the command use <db-name> where <db-name> will be the name of the database:
+To create a database, we will employ the command use `<db-name>` where `<db-name>` will be the name of the database:
 
 Syntax:
 
