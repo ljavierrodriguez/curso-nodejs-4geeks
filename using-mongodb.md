@@ -53,7 +53,7 @@ test>
 Syntax:
 
 ```bash
-    test> show dbs
+test> show dbs
 ```
 
 Expected response:
