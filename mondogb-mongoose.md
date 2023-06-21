@@ -2,36 +2,35 @@
     <img src="./assets/mongodb.png" />
 </p>
 
-# ¿Qué es MongoDB?
+# What is MongoDB?
 
-***MongoDB*** es una base de datos de documentos que ofrece una gran escalabilidad y flexibilidad, y un modelo de consultas e indexación avanzado.
+***MongoDB*** is a document database that offers great scalability and flexibility, and a model of advanced indexing and queries.
 
+# Main Features
 
-# Características principales
+## Ad Hoc queries
 
-## Consultas ad hoc
+MongoDB supports field searches, ranges, and regular expressions queries. Queries can return a specific field of the document, but can also be a user-defined function for better use.
 
-MongoDB soporta la búsqueda por campos, consultas de rangos y expresiones regulares. Las consultas pueden devolver un campo específico del documento pero también puede ser una función definida por el usuario para su mejor ocupación.
+## Indexation
 
-## Indexación
+Any field in a MongoDB field can be indexed, or it is possible to create secondary indexes. The concept of secondary indexes in MongoDB is similar to the one used in relational databases.
 
-Cualquier campo en un documento de MongoDB puede ser indexado, al igual que es posible hacer índices secundarios. El concepto de índices en MongoDB es similar al empleado en base de datos relacionales..
+## Replication
 
-## Replicación
+MongoDB supports the primary-secondary type of replication. Each group of primary and its secondaries is called a replica set. The primary can execute read and write commands. The secondaries replicate the primary data and can only be used to read or for backup copies, but write operations cannot be done. The secondaries have the ability to choose a new primary in case the current one does not respond.
 
-MongoDB soporta el tipo de replicación primario-secundario. Cada grupo de primario y sus secundarios se denomina replica set.13​ El primario puede ejecutar comandos de lectura y escritura. Los secundarios replican los datos del primario y sólo se pueden usar para lectura o para copia de seguridad, pero no se pueden realizar escrituras. Los secundarios tienen la habilidad de poder elegir un nuevo primario en caso de que el primario actual deje de responder.
+## Load balancing
 
-## Balanceo de carga
+MongoDB can scale in a horizontal fashion using the concept of [shard. The developer chooses a sharding key, which determines how the data of a collection will be distributed. The data is divided into ranges (based on the sharding key) and distributed across multiple shards. Each shard can be a replica set. MongoDb has the capacity to run on multiple servers, balancing the load and/or replicating the data in order to keep the system running in the event of a hardware failure. The automatic configuration is easy to deploy under MongoDB and new servers can be added to MongoDB with the database system running.
 
-MongoDB puede escalar de forma horizontal usando el concepto de [shard.14​ El desarrollador elige una clave de sharding, la cual determina cómo serán distribuidos los datos de una colección. Los datos son divididos en rangos (basado en la clave de sharding) y distribuidos a través de múltiples shard. Cada shard puede ser una réplica set. MongoDB tiene la capacidad de ejecutarse en múltiple servidores, balanceando la carga y/o replicando los datos para poder mantener el sistema funcionando en caso de que exista un fallo de hardware. La configuración automática es fácil de implementar bajo MongoDB y se pueden agregar nuevas servidores a MongoDB con el sistema de base de datos funcionando.
+## File Storage
 
-## Almacenamiento de archivos
+MongoDb can be used like a filesystem, taking advantage of the capacity of MongoDB for load balancing and data replication in multiple servers. This functionality, called GridFS15​ included in the official distribution, deploys a series of functions and methods to manage files and content on top of the drivers, not on top of the server. In a system with multiple servers, the files can be distributed and replicated among them seamlessly, thus creating an efficient fault-tolerant system with load balancing. 
 
-MongoDB puede ser utilizado como un sistema de archivos, aprovechando la capacidad de MongoDB para el balanceo de carga y la replicación de datos en múltiples servidores. Esta funcionalidad, llamada GridFS15​ e incluida en la distribución oficial, implementa sobre los drivers, no sobre el servidor,16​ una serie de funciones y métodos para manipular archivos y contenido. En un sistema con múltiple servidores, los archivos pueden ser distribuidos y replicados entre los mismos de forma transparente, creando así un sistema eficiente tolerante de fallos y con balanceo de carga.
+## Aggregation
 
-## Agregación
-
-MongoDB proporciona un framework de agregación que permite realizar operaciones similares al "GROUP BY" de SQL. El framework de agregación está construido como un pipeline en el que los datos van pasando a través de diferentes etapas en los cuales estos datos son modificados, agregados, filtrados y formateados hasta obtener el resultado deseado. Todo este procesado es capaz de utilizar índices si existieran y se produce en memoria. Asimismo, MongoDB proporciona una función MapReduce que puede ser utilizada para el procesamiento por lotes de datos y operaciones de agregación.
+MongoDb provides an aggregation framework that allows operations similar to “GROUP BY” of SQL. The aggregation framework is built like a pipeline in which data passes through different stages in which they are modified, added, filtered, and formatted until the desired result is obtained. All this process is capable of using indexes, if available, and executes in memory. In addition, MongoDB provides a MapReduce function that can be used for batch processing of data and aggregation operations.
 
 <p>&nbsp;</p>
 
@@ -39,19 +38,22 @@ MongoDB proporciona un framework de agregación que permite realizar operaciones
   <img height="200" src="./assets/mongoose.png" />
 </p>
 
-# ¿Qué es mongoose?
 
-***Mongoose*** es una librería para Node.js que nos permite escribir consultas para una base de datos de MongooDB, con características como validaciones, construcción de queries, middlewares, conversión de tipos y algunas otras, que enriquecen la funcionalidad de la base de datos.
+# What is Mongoose?
 
-# Características
+***Mongoose*** is a library for Node.js that allows us to write queries for a MongoDB database, with features like validations, queries construction, middlewares, type conversions, and some others, that enhance the database functionality.
 
-Mongoose proporciona una increíble cantidad de funcionalidades para crear y trabajar con esquemas. Mongoose actualmente contiene ocho SchemaTypes que una propiedad se guarda como cuando se conserva a MongoDB. Son:
+# Features
 
-- String (Cadena)
-- Number (Número)
-- Date (Fecha)
+MongoDB provides an incredible amount of functionalities to create and work with schemes. Mongoose currently contains eight SchemaTypes that a property keeps like when you preserve a MongoDB.
+These are:
+
+- String
+- Number
+- Date
 - Buffer
-- Boolean (Booleano)
-- Mixed (Mixto)
+- Boolean
+- Mixed
 - ObjectId
-- Array (Matriz)
+- Array
+
