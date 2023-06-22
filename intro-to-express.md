@@ -6,7 +6,7 @@ Express is a web framework, written in Javascript and hosted within the NodeJS r
 
 ## What function does Express have in a web application?
 
-First, let's define what is Express. It is basically a minimalist development framework for Node. JS that allows to structure an application in an agile way, provides us functionality such as routing, options to manage sessions and cookies, etc. Express not only allows us to create *Web Applications*, but also *API's*, this means that in addition to managing our frontend (html, css, images, javascript, etc.), it allows us to create apis witch can be used with any framework or frontend library like: React, Angular, Vue, etc.
+First, let's define what is Express. It is basically a minimalist development framework for NodeJS that allows to structure an application in an agile way, provides us functionality such as routing, options to manage sessions and cookies, etc. Express not only allows us to create *Web Applications*, but also *API's*, this means that in addition to managing our Front End (HTML, CSS, images, Javascript, etc.), it allows us to create APIs witch can be used with any framework or Front End library like: React, Angular, Vue, etc.
 
 ## Start an application with Express
 
@@ -16,7 +16,7 @@ To start a project with Express we will create a folder called *test-express*, o
 $ npm init -y
 ```
 
-Once executed, we will obtain a basic configuration file called *package.json*. Once created the file to work nodejs with modules, we can modify our ***package.json*** and add the following:
+Once executed, we will obtain a basic configuration file called *package.json*. Once created the file to work NodeJS with modules, we can modify our ***package.json*** and add the following:
 
 ```json
 {
@@ -26,7 +26,7 @@ Once executed, we will obtain a basic configuration file called *package.json*. 
 }
 ```
 
-By default nodejs works with commonjs to import the modules inside our application.
+By default NodeJS works with CommonJS to import the modules inside our application.
 
 We will proceed to install Express using the following command:
 
@@ -86,7 +86,7 @@ app.set('view engine', 'pug');
 ...
 ```
 
-8. To define where our public files will be loaded, such as css, js, images, or downloadable files, we can add the following line.
+8. To define where our public files will be loaded, such as CSS, JS, images, or downloadable files, we can add the following line.
 
 ```javascript
 ...
@@ -99,7 +99,3 @@ app.use(express.static(path.join(__dirname, 'public')));
 ```bash
 $ node app.js
 ```
-
-
-
-
