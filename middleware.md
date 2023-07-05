@@ -1,33 +1,33 @@
 ![express-middleware-nodejs](./assets/nodejs.jpeg)
 
-NodeJS y Express nos permiten también crear sitios web totalmente funcionales utilizando solo nodejs, ya que nos permite configurar nuestro proyecto y permitirnos usar archivos estaticos asi como generar vistas en html css y javascript. Así como a su vez también nos permite usar motores de plantillas como ejs, pug/jade, etc.
+Node.js and Express also allow us to create totally functional websites using only node.js since it lets us configure our project and allows us to use static files, as well as generate views in html, css and javascript. It also allows us to use template engines like ejs, pug/jade, etc.
 
-En esta seccion aprenderemos a crear un sitio web usando bootstrap y luego aprenderemos lo basico para utilizar un motor de plantillas el cual utilizaremos pug pero primero tenermos que entender que son los middleware
+In this section, we will learn how to create a website using bootstrap, and then we will learn the basics in order to use a template engine, which we will be using pug, but first, we need to understand what middleware is.
 
-Express es una infraestructura web de direccionamiento y middleware que tiene una funcionalidad mínima propia: una aplicación Express es fundamentalmente una serie de llamadas a funciones de middleware.
+Express is an addressing web infrastructure and middleware that has its own minimum functionality: an Express application is basically a series of calls to middleware functions.
 
-Las funciones de middleware son funciones que tienen acceso al objeto de solicitud (req), al objeto de respuesta (res) y a la siguiente función de middleware en el ciclo de solicitud/respuestas de la aplicación. La siguiente función de middleware se denota normalmente con una variable denominada next.
+The middleware functions have access to the request object (req), to the response object (res), and to the next middleware function in the request/response cycle of the application. The next middleware function is denoted generally with a variable called next.
 
-Las funciones de middleware pueden realizar las siguientes tareas:
+Middleware functions can perform the following tasks:
 
-- Ejecutar cualquier código.
-- Realizar cambios en la solicitud y los objetos de respuesta.
-- Finalizar el ciclo de solicitud/respuestas.
-- Invocar la siguiente función de middleware en la pila.
+- Execute any code.
+- Perform changes in the request and the response objects.
+- End the request/response cycle.
+- Invoke the next middleware function in the stack.
 
-Si la función de middleware actual no finaliza el ciclo de solicitud/respuestas, debe invocar next() para pasar el control a la siguiente función de middleware. De lo contrario, la solicitud quedará colgada.
+If the current middleware function does not end the request/response cycle, it should invoke next() to pass control to the next middleware function. Otherwise, the request would remain hung.
 
-Una aplicación Express puede utilizar los siguientes tipos de middleware:
+An Express application can use the following types of middleware:
 
-1. Middleware de nivel de aplicación
-2. Middleware de nivel de direccionador
-3. Middleware de manejo de errores
-4. Middleware incorporado
-5. Middleware de terceros
+1. Application-level Middleware
+2. Addressing level Middleware
+3. Error management Middleware
+4. Incorporated Middleware
+5. 3rd party Middleware
 
-Puede cargar middleware de nivel de aplicación y de nivel de direccionador con una vía de acceso de montaje opcional. También puede cargar una serie de funciones de middleware a la vez, lo que crea una subpila del sistema de middleware en un punto de montaje.
+You can load the application and address-level middleware with an optional mounting access path. You can also load a series of middleware functions at once, which creates a middleware system sub-stack in a mounting point. 
 
-Para cargar la función de middleware, llame a app.use(), especificando la función de middleware. Por ejemplo, el siguiente código carga la función de middleware myLogger antes de la ruta a la vía de acceso raíz (/).
+To load the middleware function, call app.use(), specifying the middleware function. For example, the following code loads the myLogger middleware function before the route to the root access path (/).
 
 ```javascript
 let express = require('express');
@@ -47,11 +47,11 @@ app.get('/', function (req, res) {
 app.listen(3000);
 ```
 
-### Middleware de nivel de aplicación
+### Application Level Middleware
 
-Enlace el middleware de nivel de aplicación a una instancia del objeto de aplicación utilizando las funciones *app.use()* y *app.METHOD()*, donde *METHOD* es el método HTTP de la solicitud que maneja la función de middleware (por ejemplo, GET, POST, PUT o DELETE) en minúsculas.
+Link the application-level middleware to an instance of the application object using the function's *app.use()* and *app.METHOD()*, where *METHOD* is the HTTP method of the request that the middleware function uses (for example, GET, POST, PUT, or DELETE) in lowercase. 
 
-Este ejemplo muestra una función de middleware sin ninguna vía de acceso de montaje. La función se ejecuta cada vez que la aplicación recibe una solicitud.
+This example shows a middleware function without any mounting access path. The function executes each time the application receives a request.
 
 ```javascript
 let app = express();
@@ -62,7 +62,7 @@ app.use(function (req, res, next) {
 });
 ```
 
-Este ejemplo muestra una función de middleware montada en la vía de acceso /user/:id. La función se ejecuta para cualquier tipo de solicitud HTTP en la vía de acceso /user/:id.
+This example shows a middleware function mounted on the access path /user/:id. The function executes with any type of HTTP request on the access path /user/:id.
 
 ```javascript
 app.get('/user/:id', function (req, res, next) {
@@ -70,17 +70,17 @@ app.get('/user/:id', function (req, res, next) {
 });
 ```
 
-### Middleware de nivel de direccionador
+### Addressing Level Middleware
 
-El middleware de nivel de direccionador funciona de la misma manera que el middleware de nivel de aplicación, excepto que está enlazado a una instancia de express.Router().
+The addressing level middleware works in the same way, the application level middleware does, except that it is linked to an instance of express.Router().
 
 ```javascript
 let router = express.Router();
 ```
 
-### Middleware de manejo de errores
+### Error Management Middleware
 
-Defina las funciones de middleware de manejo de errores de la misma forma que otras funciones de middleware, excepto con cuatro argumentos en lugar de tres, específicamente con la firma (err, req, res, next):
+Define the error management middleware functions the same way as other middleware functions, except with four arguments instead of three, specifically with the signature (err, req, res, next):
 
 ```javascript
 app.use(function(err, req, res, next) {
@@ -89,28 +89,27 @@ app.use(function(err, req, res, next) {
 });
 ```
 
-### Middleware incorporado
+### Incorporated Middleware
 
-Desde la versión 4.x, Express ya no depende de Connect. Excepto express.static, todas las funciones de middleware que se incluían previamente con Express están ahora en módulos diferentes. Consulte la lista de funciones de middleware.
+Since version 4.x, Express no longer depends on Connect. Except express.static, all middleware functions previously included with Express are now in different modules. Check the middleware functions list.
 
 express.static(root, [options])
-La única función de middleware incorporado en Express es express.static. Esta función se basa en serve-static y es responsable del servicio de activos estáticos de una aplicación Express.
+The only middleware function included in Express is express.static. This function is based on serve-static and is responsible for the static assets service of an Express application.
+The argument root specifies the root directory from where the static assets service is running.
 
-El argumento root especifica el directorio raíz desde el que se realiza el servicio de activos estáticos.
+### 3rd Party Middleware
 
-### Middleware de terceros
+Use the 3rd party middleware to add functionality to the Express applications
 
-Utilice el middleware de terceros para añadir funcionalidad a las aplicaciones Express.
+Install the Node.js module for the required functionality and load it on the application at the application level or addressing level.
 
-Instale el módulo Node.js para la funcionalidad necesaria y cárguelo en la aplicación a nivel de aplicación o a nivel de direccionador.
-
-El siguiente ejemplo ilustra la instalación y carga de la función de middleware de análisis de cookies cookie-parser.
+The following example shows the installation and loading of the middleware cookies analysis function, cookie-parser.
 
 ```bash
 $ npm install cookie-parser
 ```
 
-Codigo Ejemplo:
+Codigo Example:
 
 ```javascript
 const express = require('express');
@@ -120,3 +119,7 @@ const cookieParser = require('cookie-parser');
 // load the cookie-parsing middleware
 app.use(cookieParser());
 ```
+
+
+
+
