@@ -2,7 +2,7 @@
 
 NodeJS y Express nos permiten también crear sitios web totalmente funcionales utilizando solo nodejs, ya que nos permite configurar nuestro proyecto y permitirnos usar archivos estaticos asi como generar vistas en html css y javascript. Así como a su vez también nos permite usar motores de plantillas como ejs, pug/jade, etc.
 
-En esta seccion aprenderemos a crear un sitio web usando bootstrap y luego aprenderemos lo basico para utilizar un motor de plantillas el cual utilizaremos pug pero primero tenermos que entender que son los middleware
+En esta sección aprenderemos a crear un sitio web usando bootstrap y luego aprenderemos lo básico para utilizar un motor de plantillas el cual utilizaremos pug pero primero tenemos que entender que son los middleware
 
 Express es una infraestructura web de direccionamiento y middleware que tiene una funcionalidad mínima propia: una aplicación Express es fundamentalmente una serie de llamadas a funciones de middleware.
 
