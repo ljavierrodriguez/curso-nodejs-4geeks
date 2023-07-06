@@ -115,7 +115,7 @@ const contactSchema = mongoose.Schema({
 
 ## Crear los modelos de Mongoose
 
-Hemos anteriormente creado dos esquemas los cuales son user y contact, los cuales nos ayudaran a crear los modelos User y Contact respectivamente usando el ***mongoose.model()*** a través del objecto mongoose.
+Hemos anteriormente creado dos esquemas los cuales son user y contact, los cuales nos ayudarán a crear los modelos User y Contact respectivamente usando el ***mongoose.model()*** a través del objecto mongoose.
 
 Ejemplo 1:
 
@@ -126,7 +126,7 @@ const Contact = mongoose.model('Contact', contactSchema);
 
 ## Guardar datos usando los modelos de Mongoose
 
-Hemos anteriormente creado dos modelos los cuales son User y Contact, los cuales nos ayudaran a crear usuarios y contactos respectivamente en la base de datos:
+Hemos anteriormente creado dos modelos los cuales son User y Contact, los cuales nos ayudarán a crear usuarios y contactos respectivamente en la base de datos:
 
 Ejemplo 1:
 
