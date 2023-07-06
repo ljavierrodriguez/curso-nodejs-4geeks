@@ -15,19 +15,19 @@ Middleware functions can perform the following tasks:
 - End the request/response cycle.
 - Invoke the next middleware function in the stack.
 
-If the current middleware function does not end the request/response cycle, it should invoke next() to pass control to the next middleware function. Otherwise, the request would remain hung.
+If the current middleware function does not end the request/response cycle, it should invoke `next()` to pass control to the next middleware function. Otherwise, the request would remain hung.
 
 An Express application can use the following types of middleware:
 
-1. Application-level Middleware
-2. Addressing level Middleware
-3. Error management Middleware
-4. Incorporated Middleware
-5. 3rd party Middleware
+1. Application-level Middleware.
+2. Addressing level Middleware.
+3. Error management Middleware.
+4. Incorporated Middleware.
+5. 3rd party Middleware.
 
 You can load the application and address-level middleware with an optional mounting access path. You can also load a series of middleware functions at once, which creates a middleware system sub-stack in a mounting point. 
 
-To load the middleware function, call app.use(), specifying the middleware function. For example, the following code loads the myLogger middleware function before the route to the root access path (/).
+To load the middleware function, call `app.use()`, specifying the middleware function. For example, the following code loads the `myLogger` middleware function before the route to the root access path (/).
 
 ```javascript
 let express = require('express');
@@ -49,7 +49,7 @@ app.listen(3000);
 
 ### Application Level Middleware
 
-Link the application-level middleware to an instance of the application object using the function's *app.use()* and *app.METHOD()*, where *METHOD* is the HTTP method of the request that the middleware function uses (for example, GET, POST, PUT, or DELETE) in lowercase. 
+Link the application-level middleware to an instance of the application object using the function's *app.use()* and *app.METHOD()*, where *METHOD* is the HTTP method of the request that the middleware function uses (for example, `GET`, `POST`, `PUT`, or `DELETE`) in lowercase. 
 
 This example shows a middleware function without any mounting access path. The function executes each time the application receives a request.
 
@@ -62,7 +62,7 @@ app.use(function (req, res, next) {
 });
 ```
 
-This example shows a middleware function mounted on the access path /user/:id. The function executes with any type of HTTP request on the access path /user/:id.
+This example shows a middleware function mounted on the access path `/user/:id`. The function executes with any type of HTTP request on the access path `/user/:id`.
 
 ```javascript
 app.get('/user/:id', function (req, res, next) {
@@ -72,7 +72,7 @@ app.get('/user/:id', function (req, res, next) {
 
 ### Addressing Level Middleware
 
-The addressing level middleware works in the same way, the application level middleware does, except that it is linked to an instance of express.Router().
+The addressing level middleware works in the same way, as the application level middleware does, except that it is linked to an instance of `express.Router()`.
 
 ```javascript
 let router = express.Router();
@@ -91,10 +91,10 @@ app.use(function(err, req, res, next) {
 
 ### Incorporated Middleware
 
-Since version 4.x, Express no longer depends on Connect. Except express.static, all middleware functions previously included with Express are now in different modules. Check the middleware functions list.
+Since version 4.x, Express no longer depends on Connect. Except `express.static`, all middleware functions previously included with Express are now in different modules. Check the middleware functions list.
 
-express.static(root, [options])
-The only middleware function included in Express is express.static. This function is based on serve-static and is responsible for the static assets service of an Express application.
+`express.static(root, [options])`
+The only middleware function included in Express is `express.static`. This function is based on serve-static and is responsible for the static assets service of an Express application.
 The argument root specifies the root directory from where the static assets service is running.
 
 ### 3rd Party Middleware
