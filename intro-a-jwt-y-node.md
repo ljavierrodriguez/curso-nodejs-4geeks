@@ -12,11 +12,15 @@ En este caso configuramos una api muy simple en la cual se analizará la forma d
 
 Iniciar nuestro proyecto 
 
-    $ npm init -y
+```bash 
+ $ npm init -y
+```
 
 Instalar las dependencias necesarias 
 
-    $ npm i --save express jsonwebtoken
+```bash 
+ $ npm i --save express jsonwebtoken
+```
 
 Creamos un archivo index.js y agregamos el siguiente contenido:
 
@@ -40,12 +44,13 @@ app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`)
 
 Iniciamos nuestro servidor
 
-    $ node index.js
+```bash 
+ $ node index.js
+```
 
 Agregar una ruta para nuestra autenticación
 
 ```javascript
-
 app.post('/token', (req, res) => {
     const { username, password } = req.body;
     if(!(username && password)) return res.status(400).json({ msg: 'Username/Password are required!'})
@@ -96,7 +101,6 @@ auth.use((req, res, next) => {
 });
 
 ```
-
 
 Ahora agregamos una ruta privada y utilizamos nuestro middleware que valida si viene el token en el request.
 

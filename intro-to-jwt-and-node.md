@@ -2,21 +2,25 @@
     <img src="./assets/jwt-node.jpeg" width="100%" />
 </p>
 
-# NodeJS y JWT
+# NodeJS and JWT
 
-JSON Web Token is an open standard based on JSON proposed by the IETF for the creation of access tokens that allow the propagation of identity and privileges or claims in English
+JSON web Token is an open standard based on JSON proposed by IETF for the creation of access tokens, that allows the propagation of identity and privileges or claims. 
 
-## Build an API
+## Construct an API
 
-In this case we configure a very simple api in which the way to integrate jwt will be analyzed
+In this case, we will configure a very simple API in which we will analyze the method to integrate JWT
 
-Start our project
+Begin our project
 
-    $ npm init -y
+```bash 
+$ npm init -y
+```
 
-Install the necessary dependencies
+Install necessary dependencies
 
-    $ npm i --save express jsonwebtoken
+```bash 
+ $ npm i --save express jsonwebtoken
+```
 
 We create an index.js file and add the following content:
 
@@ -35,17 +39,17 @@ app.get('/', (req, res) => {
 })
 
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
-
 ```
 
-We start our server
+We initiate our server
 
-    $ node index.js
+```bash 
+$ node index.js
+```
 
-Add a route for our authentication
+Add a path for our authentication
 
 ```javascript
-
 app.post('/token', (req, res) => {
     const { username, password } = req.body;
     if(!(username && password)) return res.status(400).json({ msg: 'Username/Password are required!'})
@@ -67,7 +71,7 @@ app.post('/token', (req, res) => {
 
 ```
 
-We should get a response similar to this
+We should receive a reply similar to this one
 
 ```json
 {
@@ -75,7 +79,7 @@ We should get a response similar to this
 }
 ```
 
-Now we must create a middleware that will take care of validating the token when accessing a private endpoint:
+Now we must create a middleware that will be in charge of validating the token during the access of a private endpoint:
 
 ```javascript
 ...
@@ -97,7 +101,7 @@ auth.use((req, res, next) => {
 
 ```
 
-Now we add a private route and use our middleware that validates if the token is coming in the request.
+Now we add a private path and use our middleware to validate if the token is included with the request.
 
 ```javascript
 
@@ -165,6 +169,7 @@ auth.use((req, res, next) => {
         return res.status(400).json({ msg: 'Token is missing!'});
     }
 });
+
 
 app.get('/datos-privados', auth, (req, res) => {
     const tasks = [
